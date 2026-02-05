@@ -98,6 +98,10 @@
 /* ===========================
    BODY
 ==============================*/
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    width: 100%;
    margin: 0;
@@ -437,6 +441,11 @@ h3 {
    max-width: clamp(20rem, 40svw, 28rem);
    width: 100%;
    min-height: 30rem;
+}
+
+.image-con img {
+   width: 100%;
+   height: auto;
 }
 
 @media (max-width: 800px) {
