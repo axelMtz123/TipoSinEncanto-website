@@ -40,3 +40,17 @@ const appearOnScroll = () => {
 
 window.addEventListener('scroll', appearOnScroll);
 appearOnScroll();
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from (".img-con", {
+  xPercent: 600,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".img-con",
+    start: "top 70%",
+    end: "top 30%",
+    scrub: true,
+  }
+})
