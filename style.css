@@ -769,6 +769,7 @@ h6 {
 .contact {
    color: var(--color-muted);
    padding-top: var(--space-xl);
+   min-height: auto;
 }
 
 .contact-text {
@@ -835,7 +836,9 @@ h6 {
 }
 
 .copyright {
-   text-align: center;
+   display: flex;
+   justify-content: center;
+   gap: var(--space-lg);
 }
 
 details, summary {
@@ -863,10 +866,22 @@ details {
       padding-left: var(--space-sm);
    }
 
+   .contact-links {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+   }
+
    .contact-info {
       flex-direction: column;
-      align-items: start;
-      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+   }
+
+   .copyright {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
    }
 }
 /* ============================
