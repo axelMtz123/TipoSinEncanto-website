@@ -14,6 +14,7 @@ hamburger.addEventListener ("click", () => {
 navItems.forEach(link => {
     link.addEventListener ("click", () => {
         nav.classList.toggle ("open")
+        hamburger.classList.toggle ("open")
     })
 });
 
@@ -53,4 +54,28 @@ gsap.from (".img-con", {
     end: "top 30%",
     scrub: true,
   }
+})
+
+const splitText = new SplitType('.split', {
+  types: 'words, chars'
+});
+
+/*==== HERO ========*/
+
+gsap.from(".hero h1 .char", {
+  yPercent: 110,
+  stagger: 0.05,
+  duration: 0.9,
+  ease: "power3.out"
+});
+
+const heroCta = document.querySelector (".hero-cta")
+
+heroCta.addEventListener ("mouseenter", () => {
+  gsap.from (".hero-cta .char", {
+    yPercent: 110,
+    stagger: 0.05,
+    duration: 0.9,
+    ease: "power3.out"
+  })
 })

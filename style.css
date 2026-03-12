@@ -44,6 +44,14 @@
   --radius-md: 12px;
 }
 
+.word {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+}
 /* ==========================
    CONTAINERS
 ============================*/
@@ -702,11 +710,11 @@ h6 {
 }
 
 .marquee-track-1 {
-   animation: scroll-right 15s linear infinite;
+   animation: scroll-right 25s linear infinite;
 }
 
 .marquee-track-2 {
-   animation: scroll 15s linear infinite;
+   animation: scroll 25s linear infinite;
    animation-delay: .1s;
 }
 
@@ -809,12 +817,23 @@ h6 {
 }
 
 .contact-links {
+   padding-top: var(--space-md);
    padding-right: var(--space-md);
    margin-left: auto;
    display: flex;
+   flex-direction: column;
    gap: var(--space-md);
 }
 
+svg {
+   fill: var(--color-muted);
+   transition: .5s ease;
+}
+
+svg:hover {
+  fill: var(--color-text);
+  transform: scale(1.1);
+}
 
 .footer-menu {
    font-size: var(--fs-lg);
@@ -852,6 +871,10 @@ details {
    border-bottom: 2px solid;
 }
 
+.axel {
+   border-bottom: 2px solid;
+}
+
 @media (max-width:500px) {
    .footer-menu {
       display:none;
@@ -867,8 +890,9 @@ details {
    }
 
    .contact-links {
-      width: 100%;
-      flex-direction: column;
+      gap: var(--space-lg);
+      flex-direction: row;
+      justify-content: center;
       align-items: center;
       margin: 0;
    }
